@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://npmcdn.com/parse/dist/parse.min.js"
+    ></script>
+    <title>Запись</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <div class="nav">
+          <a class="logo nav-item">Поликлиника</a>
+          <a class="nav-item" href="./index.html">Новости</a>
+          <a class="nav-item active">Записаться</a>
+          <a class="nav-item" href="./list.html">Полезная информация</a>
+          <a class="nav-item" href="./login.html">Профиль</a>
+          <a class="nav-item" href="./admin.html">Админ-панель</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="title-content">ЗАПИСЬ</div>
+    <div class="content">
+      <div class="input-wrapper">
+        <label class="input-title">ФИО</label>
+        <input class="input" type="text" id="name" />
+      </div>
+
+      <div class="input-wrapper">
+        <label class="input-title">Пол</label>
+        <select class="input" id="gender">
+          <option value="Мужской">Мужской</option>
+          <option value="Женский">Женский</option>
+        </select>
+      </div>
+
+      <div class="input-wrapper">
+        <label class="input-title">Категория</label>
+        <select class="input" id="category">
+          <option value="Категория врача №1">Категория врача №1</option>
+          <option value="Категория врача №2">Категория врача №2</option>
+          <option value="Категория врача №3">Категория врача №3</option>
+          <option value="Категория врача №4">Категория врача №4</option>
+        </select>
+      </div>
+
+      <div class="input-wrapper">
+        <label class="input-title">День записи</label>
+        <input class="input" type="date" id="day" />
+      </div>
+
+      <div class="input-wrapper">
+        <label class="input-title">Возраст</label>
+        <select class="input" id="age">
+          <option value="До 3 лет">До 3 лет</option>
+          <option value="4-14 лет">4-14 лет</option>
+          <option value="15-18 лет">15-18 лет</option>
+          <option value="Старше 18 лет">Старше 18 лет</option>
+        </select>
+      </div>
+
+      <div class="input-wrapper">
+        <label class="input-title">Город Горловка, район: </label>
+        <select class="input" id="city">
+          <option value="Центрально-Городской район">
+            Центрально-Городской район
+          </option>
+          <option value="Ж/м Строителей">Ж/м Строителей</option>
+          <option value="Ж/м Комсомолец, пос. Курганка, пос. Глубокая">
+            Ж/м Комсомолец, пос. Курганка, пос. Глубокая
+          </option>
+          <option value="Пос. шахты им. Н.Изотова (Бессарабка)">
+            Пос. шахты им. Н.Изотова (Бессарабка)
+          </option>
+          <option value="Пос. Озеряновка">Пос. Озеряновка</option>
+          <option value="Поселок Широкая Балка">Поселок Широкая Балка</option>
+        </select>
+      </div>
+
+      <div class="input-wrapper">
+        <label class="input-title">Время записи</label>
+        <span>
+          <select class="input half" id="hours"></select>
+        </span>
+        <span>
+          <select class="input half" id="minutes"></select>
+        </span>
+      </div>
+
+      <div class="input-wrapper">
+        <label class="input-title">Цель обращения</label>
+        <select class="input" id="target">
+          <option value="Консультация">Консультация</option>
+          <option value="Оформление документов, справок, запросов">Оформление документов, справок, запросов</option>
+          <option value="Получить талон на прием (терапевт, педиатр, семейный врач, хирург)">Получить талон на прием (терапевт, педиатр, семейный врач, хирург)</option>
+          <option value="Вызвать врача на дом">Вызвать врача на дом</option>
+        </select>
+      </div>
+
+    
+      <div class="input-wrapper">
+        <label class="input-title">Телефон (не обязательно)</label>
+        <input class="input" type="text" id="phone" />
+      </div>
+
+      <div class="input-wrapper">
+        <label class="input-title">Комментарий (не обязательно)</label>
+        <input class="input" type="text" id="comment" />
+      </div>
+      <div class="btn-content">
+        <button id="register-btn">Записаться</button>
+      </div>
+    </div>
+    <script>
+      Parse.initialize(
+        "tCxJcPzKBIAtvlPKU7ymbar6zlnwWcWYsFji3oZD",
+        "z31rCPBXcCcfXPnUaGTMEo9yGjCQ6KLiaMw1cXfO"
+      );
+      Parse.serverURL = "https://parseapi.back4app.com/";
+    </script>
+    <script src="./register.js" type="module"></script>
+  </body>
+</html>

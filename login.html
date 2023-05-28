@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://npmcdn.com/parse/dist/parse.min.js"
+    ></script>
+    <title>Вход / Регистрация</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <div class="nav">
+          <a class="logo nav-item">Поликлиника</a>
+          <a class="nav-item" href="./index.html">Новости</a>
+          <a class="nav-item" href="./register.html">Записаться</a>
+          <a class="nav-item" href="./list.html">Полезная информация</a>
+          <a class="nav-item" href="./login.html">Профиль</a>
+          <a class="nav-item" href="./admin.html">Админ-панель</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="title-content">Войти / Создать аккаунт</div>
+    <div class="content">
+      <div id="login-block" class="content">
+        <h1 class="title">Вход / Регистрация</h1>
+        <div class="input-wrapper">
+          <label class="input-title">Логин</label>
+          <input class="input" type="text" id="login" />
+        </div>
+        <div class="input-wrapper">
+          <label class="input-title">Пароль</label>
+          <input class="input" type="text" id="password" />
+        </div>
+
+        <div class="line">Для регистрации</div>
+
+        <div class="input-wrapper">
+          <label class="input-title">ФИО</label>
+          <input class="input" type="text" id="name" />
+        </div>
+        <div class="input-wrapper">
+          <label class="input-title">Пол</label>
+          <select class="input" id="gender">
+            <option value="Мужской">Мужской</option>
+            <option value="Женский">Женский</option>
+          </select>
+        </div>
+  
+        <div class="input-wrapper">
+          <label class="input-title">День рождения</label>
+          <input class="input" type="date" id="birthday" />
+        </div>
+  
+        <div class="input-wrapper">
+          <label class="input-title">Город Горловка, район: </label>
+          <select class="input" id="city">
+            <option value="Центрально-Городской район">
+              Центрально-Городской район
+            </option>
+            <option value="Ж/м Строителей">Ж/м Строителей</option>
+            <option value="Ж/м Комсомолец, пос. Курганка, пос. Глубокая">
+              Ж/м Комсомолец, пос. Курганка, пос. Глубокая
+            </option>
+            <option value="Пос. шахты им. Н.Изотова (Бессарабка)">
+              Пос. шахты им. Н.Изотова (Бессарабка)
+            </option>
+            <option value="Пос. Озеряновка">Пос. Озеряновка</option>
+            <option value="Поселок Широкая Балка">Поселок Широкая Балка</option>
+          </select>
+        </div>
+  
+        <div class="full">
+          <button class="reg-btn main" id="loginBtn">Войти</button>
+          <button class="reg-btn" id="newProfileBtn">Зарегистрироватся</button>
+        </div>
+      </div>
+      <div id="profile-block" style="display: none">
+        <h1 class="title" id="profile-name">ЛОГИН</h1>
+        <div class="profile-card" id="profile-id"></div>
+        <div class="profile-card" id="profile-login"></div>
+        <div class="profile-card" id="profile-age"></div>
+        <div class="profile-card" id="profile-gender"></div>
+        <div class="profile-card" id="profile-city"></div>
+      </div>
+    </div>
+    <script>
+      Parse.initialize(
+        "tCxJcPzKBIAtvlPKU7ymbar6zlnwWcWYsFji3oZD",
+        "z31rCPBXcCcfXPnUaGTMEo9yGjCQ6KLiaMw1cXfO"
+      );
+      Parse.serverURL = "https://parseapi.back4app.com/";
+    </script>
+    <script src="./login.js"></script>
+  </body>
+</html>
