@@ -23,6 +23,7 @@ body {
 /* Титулка */
 
 .header {
+  z-index: 999;
   max-width: 1110px;
   top: 0;
   position: sticky;
@@ -44,12 +45,33 @@ body {
 }
 
 .logo {
+  margin-left: 27px;
   margin-right: 10px;
   font-size: 27px !important;
   text-align: center;
   font-family: 'Lobster', cursive;
   letter-spacing: 3px;
   color: #00AA8A !important;
+}
+
+.logo::before {
+  position: absolute;
+  content: "";
+  top: 26px;
+  left: 2px;
+  width: 36px;
+  height: 7px;
+  background: red;
+}
+
+.logo::after {
+  position: absolute;
+  content: "";
+  top: 12px;
+  left: 16px;
+  width: 8px;
+  height: 36px;
+  background: red;
 }
 
 .nav {
@@ -136,23 +158,30 @@ body {
 .news {
   position: relative;
   max-width: calc(50% - 80px);
-  height: 375px;
+  height: 330px;
   margin: 20px;
   color: #6B7786;
   font-size: 20px;
   border-radius: 10px;
   padding: 20px;
+  text-align: center;
   background-color: #F1F3F6;
 }
 
 .news-title {
   padding: 0;
-  margin: 0 0 10px;
+  margin: 0 0 15px;
+  text-align: left;
   background: #F1F3F6;
 }
 
 .fa-newspaper {
   margin-right: 15px;
+}
+
+.news img {
+  height: 250px;
+  object-fit: contain;
 }
 
 .news-content {
@@ -171,7 +200,7 @@ body {
   margin-top: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(148, 146, 146, 0.15);
 }
 
 /* Запись */
@@ -186,6 +215,45 @@ body {
 }
 
 /* Полезная информация */
+
+.about-card {
+  width: 480px;
+  height: 220px;
+  padding: 15px;
+  margin: 15px;
+  font-size: 20px;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid rgb(239, 239, 239);
+  background: #f8f9fb
+}
+
+.fa-phone, .fa-envelope, .fa-discord, .fa-phone-rotary {
+  font-size: 45px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.about-card-title {
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.about-card-desc {
+  display: block;
+  position: relative;
+  color: rgb(77, 77, 77);
+  max-height: 55px;
+  padding-bottom: 15px;
+  overflow: hidden;
+}
+
+.about-card-info {
+  margin-top: 15px;
+  color: #00AA8A;
+}
+
 .card {
   width: 408px;
   padding: 15px;
@@ -249,6 +317,7 @@ body {
 }
 
 .info-card-title {
+  text-align: center;
   margin-bottom: 30px;
   font-size: 21px;
   font-weight: 600;
@@ -319,7 +388,7 @@ body {
   border-bottom: 1px solid rgb(226, 226, 226);
 }
 
-.profile-card{
+.profile-card {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
