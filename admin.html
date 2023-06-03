@@ -31,6 +31,25 @@
     </header>
 
     <div class="title-content">АДМИН-ПАНЕЛЬ</div>
+    <div class="content">
+    <select class="input" id="doctor-category" onchange="selectCategory()">
+      <option value="">Выбрать категорию</option>
+      <option value="Терапевт">Терапевт</option>
+      <option value="Хирург">Хирург</option>
+      <option value="Невролог">Невролог</option>
+      <option value="Оториноларинголог">Оториноларинголог</option>
+      <option value="Окулист">Окулист</option>
+      <option value="Окулист">Травматолог</option>
+      <option value="Окулист">Акушер-гинеколог</option>
+      <option value="Окулист">Уролог</option>
+      <option value="Окулист">Гастроэнтеролог</option>
+      <option value="Окулист">Кардиолог</option>
+      <option value="Окулист">Эндокринолог</option>
+      <option value="Окулист">Стоматолог</option>
+      <option value="Окулист">Аллерголог</option>
+      <option value="Окулист">Ревматолог</option>
+    </select>
+    </div>
     <div class="content" id="admin-content">
       <!-- <div class="t">
         <div class="t-title">Мед. карта № 46526</div>
@@ -50,6 +69,6 @@
       );
       Parse.serverURL = "https://parseapi.back4app.com/";
     </script>
-    <script src="./admin.js" type="module"></script>
+    <script src="./admin.js"></script>
   </body>
 </html>

@@ -31,6 +31,31 @@ function load() {
   }
 }
 
+function selectCategory() {
+  const input = document.getElementById("doctor-category");
+  const filter = input.value.toUpperCase();
+  const cards = document.getElementsByClassName("card");
+
+  if (filter !== "") {
+    for (let i = 0; i < cards.length; i++) {
+      const title = cards[i].getElementsByClassName("card-doctor")[0];
+      const value =
+        `Категория: ${title.textContent}` || `Категория: ${title.innerHTML}`;
+      
+      console.log(title.innerHTML)
+        if (value.toUpperCase().indexOf(filter) > -1) {
+        cards[i].style.display = "";
+      } else {
+        cards[i].style.display = "none";
+      }
+    }
+  } else {
+    for (let i = 0; i < cards.length; i++) {
+      cards[i].style.display = "";
+    }
+  }
+}
+
 function initCard(data) {
   const listContent = document.getElementById("admin-content");
   const card = document.createElement("div");
@@ -56,7 +81,7 @@ function initCard(data) {
   cardComment.className = "card-comment";
 
   cardAge.className = "card-time";
-  cardGender.className = "card-doctor";
+  cardGender.className = "card-gendr";
   cardTarget.className = "card-phone";
   cardCity.className = "card-comment";
 
