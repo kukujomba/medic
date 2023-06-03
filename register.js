@@ -21,6 +21,7 @@ async function createUser() {
       if (checkIsAvailableTime()) {
         user = await user.save();
         alert("Запись добавлена");
+        read();
       } else {
         alert(
           `Данный день ${document.getElementById("day").value} или время ${
@@ -54,8 +55,9 @@ function checkIsAvailableTime() {
     ) {
       out = false;
     }
+    console.log(data[i].get("day") + data[i].get("hours") + data[i].get("minutes") ===
+    d + h + m)
   }
-  console.log(out)
   return out;
 }
 
