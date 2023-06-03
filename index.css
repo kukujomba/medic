@@ -45,7 +45,7 @@ body {
 }
 
 .logo {
-  margin-left: 27px;
+  margin-left: 0;
   margin-right: 10px;
   font-size: 27px !important;
   text-align: center;
@@ -54,25 +54,25 @@ body {
   color: #00AA8A !important;
 }
 
-.logo::before {
+/* .logo::before {
   position: absolute;
   content: "";
-  top: 26px;
-  left: 2px;
-  width: 36px;
-  height: 7px;
+  top: 21px;
+  left: 4px;
+  width: 37px;
+  height: 16px;
   background: red;
 }
 
 .logo::after {
   position: absolute;
   content: "";
-  top: 12px;
+  top: 10px;
   left: 16px;
-  width: 8px;
+  width: 15px;
   height: 36px;
   background: red;
-}
+} */
 
 .nav {
   display: flex;
