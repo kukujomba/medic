@@ -155,24 +155,33 @@ body {
 
 /* Новости */
 
+.column {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .news {
   position: relative;
-  max-width: calc(50% - 80px);
-  height: 330px;
-  margin: 20px;
+  width: calc(100% - 64px);
+  height: auto;
   color: #6B7786;
   font-size: 20px;
   border-radius: 10px;
   padding: 20px;
+  margin: 12px 10px;
   text-align: center;
-  background-color: #F1F3F6;
+  border: 2px solid #00AA8A;
+  background-color: #ffffff;
 }
 
 .news-title {
   padding: 0;
   margin: 0 0 15px;
   text-align: left;
-  background: #F1F3F6;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(149, 149, 149, 0.3);
 }
 
 .fa-newspaper {
@@ -180,7 +189,9 @@ body {
 }
 
 .news img {
-  height: 250px;
+  width: 100%;
+  height: 290px;
+  overflow: hidden;
   object-fit: contain;
 }
 
@@ -199,8 +210,13 @@ body {
   text-align: right;
   margin-top: 5px;
   padding-top: 5px;
+  height: auto;
+  border-top: 1px solid rgba(149, 149, 149, 0.3);
+}
+
+.news-date.desc {
+  text-align: center;
   padding-bottom: 5px;
-  border-top: 1px solid rgba(148, 146, 146, 0.15);
 }
 
 /* Запись */
@@ -254,14 +270,21 @@ body {
   color: #00AA8A;
 }
 
+#admin-content {
+  border-radius: 10px;
+  padding: 12px 0;
+  border: 1px solid rgb(227, 227, 227);
+  background: #F1F3F6
+}
+
 .card {
-  width: 408px;
+  width: 308px;
   padding: 15px;
   margin: 8px;
   font-size: 20px;
   border-radius: 5px;
-  border: 1px solid rgb(226, 226, 226);
-  background: #F1F3F6
+  border: 1px solid rgb(213, 213, 213);
+  background: #fdfdfd
 }
 
 .card-title {
@@ -287,18 +310,20 @@ body {
 .card-delete {
   cursor: pointer;
   width: calc(100% - 10px);
-  color: white;
+  color: black;
   padding: 12px 0;
   margin: 15px 5px 5px;
   border-radius: 5px;
   font-weight: bold;
   letter-spacing: 3px;
-  border: none;
-  background: red;
+  border: 2px solid rgb(183, 30, 30);
+  background: transparent;
 }
 
 .card-delete:hover {
-  background: rgb(169, 28, 28);
+  border: 2px solid red;
+  color: white;
+  background: red;
 }
 
 .btn-content {
@@ -424,7 +449,7 @@ body {
   background: rgb(219, 22, 22);
 }
 
-#doctor-category{
+#doctor-category {
   position: relative;
   width: 250px;
   margin: 10px;
